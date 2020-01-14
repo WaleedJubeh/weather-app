@@ -1,0 +1,35 @@
+<div class='root flex-container space-between column width-100'>
+    <div routerLink='/home' class='icon-menu' style="border: none;">
+        <i class="fas fa-arrow-right"></i>
+    </div>
+    <div>
+        <div class='text-center'>
+            {{currentCity.cityName}}
+        </div>
+        <div class='text-center'>
+            Day
+        </div>
+    </div>
+    <div>
+        <div>
+            <span>Tempreture</span>
+            <div class='flex-container space-between'>
+                <div><i class="fas fa-temperature-low"></i> {{currentCity.cityLow}}°</div>
+                <div><i class="fas fa-thermometer-half"></i> {{currentCity.temp}}°</div>
+                <div><i class="fas fa-temperature-high"></i> {{currentCity.cityHigh}}°</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <span>
+            Pressure
+        </span>
+        <div>
+            {{currentCity.pressure}}
+        </div>
+    </div>
+    <div>
+        <span>Wind</span>
+        <div class='flex-container space-between'>
+            <span><i class="fas fa-tachometer-alt"></i> </span> <span> {{currentCity.wind}}</span>
+            <span><i class="fas fa-directions"></i> </span> <span> {{currentCity.windDegree}} deg</span>
