@@ -15,7 +15,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
     BrowserModule,
     RouterModule,
     HttpClientModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   providers: [HttpClient],
 })

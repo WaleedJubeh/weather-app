@@ -1,21 +1,42 @@
-<div class='root flex-container space-between column width-100'>
-    <div class='icon-menu'>
-        <i class="fas fa-smog"></i>
-    </div>
-    <div routerLink='/details/{{currentCity.id}}' class='city-name'>{{currentCity.cityName}}
+<app-menu [cityNames]='aroundCity' (getSelectedId)='updateCurrentCity($event)' [(showModal)]='showModal'></app-menu>
+<ng-template #loadingTemp>
+    <div class='flex-container center-all height-100 column'>
+        <img src="./../../../assets/imgs/loading.gif" alt="">
 
-    </div>
-    <div>
-        <img class='img-responsvie' src="./../../../assets/imgs/sunny.png" alt="">
-    </div>
-    <div class='city-temp text-center'>
-        {{currentCity.temp}}°
-        <div class='city-high-low text-center'>
-            <div>
-                {{currentCity.cityLow}}° / {{currentCity.cityHigh}}°
-            </div>
+        <div class='city-temp text-center'>
+            Gatherting Data
         </div>
     </div>
+</ng-template>
+<div class='root flex-container space-between column width-100' *ngIf='loading else loadingTemp'>
+    <div (click)="showHideModal()" class='icon-menu'>
+        <i class="fas fa-smog"></i>
+    </div>
+    <div routerLink='/details/{{currentCity.id}}' class='city-name'>
+        {{currentCity.cityName}}
+        <div class='city-high-low text-center'>
+            <div>
+                {{currentCity.day}}
+            </div>
+        </div>
+        <div class='city-temp text-center'>
+            {{currentCity.temp}}°
+            <div class='city-high-low text-center'>
+                <div>
+                    {{currentCity.cityLow}}° / {{currentCity.cityHigh}}°
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <div>
+        <img class='img-responsvie' src="./../../../assets/imgs/sunny.png" alt="">
+    </div> -->
     <div class='width-100'>
-        <weather-small *ngFor='let day of days' [iconUrl]='day.iconUrl' [dayName]='day.dayName' [low]='day.main.temp_min' [high]='day.main.temp_max'></weather-small>
+        <div class='city-high-low text-left padding-l5'>
+            For a week
+        </div>
+        <div class='panel'>
+            <weather-small *ngFor="let day of days" [iconUrl]="day.iconUrl" [dayName]='day.dayName' [low]='day.main.temp_min' [high]='day.main.temp_max'></weather-small>
+        </div>
     </div>

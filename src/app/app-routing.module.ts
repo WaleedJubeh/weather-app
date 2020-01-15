@@ -6,15 +6,19 @@ import { DetailsComponent } from './pages/details/details.component';
 
 const routes: Routes = [
   {
-    path:"home",
-    component: HomeComponent
+    path: "home",
+    component: HomeComponent,
+    data: { animation: 'slideInAnimation' },
+
   },
   {
-    path:"details/:id",
-    component:DetailsComponent
+    path: "details/:id",
+    component: DetailsComponent,
+    data: { animation: 'slideInAnimation' },
+
   },
   {
-    path:"",redirectTo:"home",pathMatch:"full"
+    path: "", redirectTo: "home", pathMatch: "full"
   }
 ];
 

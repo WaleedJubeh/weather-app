@@ -15,13 +15,16 @@ html,
 body {
     height: 100%;
     // overflow-y: hidden;
+    background: rgb(87, 143, 191);
     ;
 }
 
 .city-name {
-    font-size: 60px;
+    @extend .text-center;
+    font-size: 40px;
     color: white;
     font-weight: 700;
+    padding: 20px !important;
 }
 
 .flex-container {
@@ -47,20 +50,37 @@ body {
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+}
+
 .root {
     height: 100%;
-    background: linear-gradient(45deg, #5FC9F6, #594796);
     position: relative;
 }
 
 .icon-menu {
     position: absolute;
     top: 10px;
-    left: calc(100% - 50px);
+    right: calc(100% - 50px);
     font-size: 25px;
     color: white;
     cursor: pointer;
-    &:hover {
+    z-index: 3432324;
+    &:active {
         color: rgb(114, 219, 245);
     }
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.panel {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px !important;
+}
+
+.padding-l5 {
+    padding-left: 5px !important;
 }

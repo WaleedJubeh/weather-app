@@ -1,0 +1,120 @@
+:host {
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    width: 0;
+    height: 100%;
+    z-index: 21312;
+    direction: ltr;
+    animation: collapse-in 0.5s forwards;
+    outline: none;
+    .modal-body {
+        outline: none;
+        height: 100%;
+        width: 90%;
+        background: linear-gradient(45deg, #594796c4, rgba(95, 201, 246, 0.858));
+        flex-grow: 1;
+        overflow: auto;
+        >* {
+            animation: show-children 0.7s;
+        }
+    }
+    &:focus {
+        animation: collapse-out 0.5s forwards;
+        .modal-body {
+            >* {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.search-group {
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span {
+        color: white;
+        font-size: 25px;
+    }
+    input {
+        width: 80%;
+        height: 42px;
+        border: none;
+        font-size: 20px;
+        padding: 5px;
+    }
+    padding-bottom: 5px;
+    border-bottom: 2px solid white;
+}
+
+@keyframes show-children {
+    0% {
+        // direction: ltr;
+        visibility: hidden;
+    }
+    99% {
+        // direction: ltr;
+        visibility: hidden;
+    }
+    100% {
+        // direction: rtl;
+        visibility: visible;
+    }
+}
+
+@keyframes collapse-in {
+    0% {
+        // direction: ltr;
+        width: 0px;
+    }
+    99% {
+        // direction: ltr;
+    }
+    100% {
+        // direction: rtl;
+        width: 100%;
+    }
+}
+
+.list-header {
+    font-size: 25px;
+    padding: 5px;
+}
+
+@keyframes collapse-out {
+    0% {
+        // direction: ltr;
+        width: 100%;
+    }
+    99% {
+        // direction: ltr;
+    }
+    100% {
+        // direction: rtl;
+        width: 0%;
+    }
+}
+
+.list-header {
+    font-size: 25px;
+    padding: 5px;
+}
+
+.city-element {
+    font-size: 20px;
+    padding: 7px;
+    border: 1px dashed white;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 10px;
+    &:active {
+        color: rgb(4, 250, 197);
+        border: 1px dashed rgb(4, 250, 197);
+    }
+}

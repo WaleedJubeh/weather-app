@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+  styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent implements OnInit {
   currentCity = { cityName: '', cityHigh: -1, cityLow: -1, temp: -1, id: -1,windDegree:-1, pressure: -1, wind: -1 };
