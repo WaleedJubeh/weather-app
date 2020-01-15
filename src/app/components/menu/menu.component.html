@@ -2,10 +2,13 @@
     <div class='modal-body' tabindex="0">
         <div class='search-group'>
             <span>Search By City Name</span>
-            <input [(ngModel)]='searchInput'>
+            <div class='width-100' style="position: relative;">
+                <input class="test" [(ngModel)]='searchInput' placeholder="City name">
+                <i class="fas fa-search search-icon"></i>
+            </div>
         </div>
         <div>
-            <div class='list-header'>
+            <div class='list-header text-center'>
                 Cities
             </div>
             <div class='flex-container center-all column'>

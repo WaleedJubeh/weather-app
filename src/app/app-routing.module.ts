@@ -12,7 +12,7 @@ const routes: Routes = [
 
   },
   {
-    path: "details/:id",
+    path: "details/:index",
     component: DetailsComponent,
     data: { animation: 'slideInAnimation' },
 

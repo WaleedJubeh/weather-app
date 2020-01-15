@@ -13,8 +13,8 @@
     .modal-body {
         outline: none;
         height: 100%;
-        width: 90%;
-        background: linear-gradient(45deg, #594796c4, rgba(95, 201, 246, 0.858));
+        width: 100%;
+        background: linear-gradient(45deg, #9c0000c4, #000000);
         flex-grow: 1;
         overflow: auto;
         >* {
@@ -40,17 +40,33 @@
     align-items: center;
     span {
         color: white;
-        font-size: 25px;
+        font-size: 20px;
+        padding-bottom: 10px;
     }
     input {
+        outline: none;
         width: 80%;
-        height: 42px;
+        height: 40px;
         border: none;
-        font-size: 20px;
+        font-size: 15px;
         padding: 5px;
+        padding-left: 35px;
+        border-radius: 27px;
+        position: relative;
     }
     padding-bottom: 5px;
-    border-bottom: 2px solid white;
+}
+
+.pos-r {
+    position: relative;
+}
+
+.test {
+    & i {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 }
 
 @keyframes show-children {
@@ -83,7 +99,7 @@
 }
 
 .list-header {
-    font-size: 25px;
+    font-size: 20px;
     padding: 5px;
 }
 
@@ -107,14 +123,21 @@
 }
 
 .city-element {
-    font-size: 20px;
+    font-size: 15px;
     padding: 7px;
-    border: 1px dashed white;
-    width: 70%;
+    border: 1px solid white;
+    width: 90%;
     text-align: center;
     margin-bottom: 10px;
     &:active {
         color: rgb(4, 250, 197);
         border: 1px dashed rgb(4, 250, 197);
     }
+}
+
+.search-icon {
+    position: absolute;
+    top: 13px;
+    left: 50px;
+    color: black;
 }

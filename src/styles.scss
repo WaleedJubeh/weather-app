@@ -9,13 +9,16 @@
     padding: 0;
     margin: 0;
     font-family: Poppins;
+    box-sizing: border-box;
 }
 
 html,
 body {
     height: 100%;
     // overflow-y: hidden;
-    background: rgb(87, 143, 191);
+    background-color: rgb(87, 143, 191);
+    background-image: url('./assets/imgs/lake_s.jpg');
+    background-size: cover;
     ;
 }
 
@@ -33,8 +36,12 @@ body {
         justify-content: center;
         align-items: center;
     }
-    &.space-between {
+    &.space-evenly {
         justify-content: space-evenly;
+        align-items: center;
+    }
+    &.space-between {
+        justify-content: space-between;
         align-items: center;
     }
     &.column {
@@ -62,13 +69,18 @@ body {
 .icon-menu {
     position: absolute;
     top: 10px;
-    right: calc(100% - 50px);
     font-size: 25px;
     color: white;
     cursor: pointer;
     z-index: 3432324;
     &:active {
         color: rgb(114, 219, 245);
+    }
+    &.right {
+        right: calc(100% - 50px);
+    }
+    &.left {
+        left: calc(100% - 50px);
     }
 }
 

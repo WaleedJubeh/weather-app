@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class WeatherSmallDescriptionComponent implements OnInit {
   @Input() low: number = -1;
   @Input() high: number = -1;
+  @Input() id: number = -1;
   @Input() dayName: string = '';
   @Input() iconUrl: string = '';
   constructor() { }
