@@ -1,0 +1,16 @@
+<div class="width-100 text-center flex-container column">
+    <div class="padding-l5 width-100 city-high-low text-left ">
+        For Today
+    </div>
+    <div class="panel width-100 flex-container space-between">
+
+        <div class="hour" *ngFor="let hour of hours">
+            <div>
+                <img class="center-me" src="{{hour.iconUrl}}" alt="">
+            </div>
+            <div>
+                {{hour.hour}}
+            </div>
+        </div>
+    </div>
+</div>

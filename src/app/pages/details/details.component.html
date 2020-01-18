@@ -1,23 +1,23 @@
-<div class='root flex-container space-evenly column width-100'>
-    <div routerLink='/home' class='icon-menu left' style="border: none;">
+<div class="root flex-container space-evenly column width-100">
+    <div routerLink="/home" class="icon-menu left" style="border: none;">
         <i class="fas fa-arrow-right"></i>
     </div>
     <div>
-        <div class='text-center city-name'>
+        <div class="text-center city-name">
             {{currentCity.cityName}}
         </div>
-        <div class='text-center'>
-            {{currentCity.dayName}}
+        <div class="text-center">
+            {{currentCity.day}}
         </div>
     </div>
 
-    <div class='width-100 text-center flex-container column'>
-        <div class='padding-l5 width-100 city-high-low text-left '>
+    <div class="width-100 text-center flex-container column">
+        <div class="padding-l5 width-100 city-high-low text-left ">
             Tempreture
         </div>
-        <div class='panel width-100 flex-container space-between'>
+        <div class="panel width-100 flex-container space-between">
 
-            <div class='hour'>
+            <div class="hour">
                 <div>
                     <i class="fas fa-temperature-low"></i>
                 </div>
@@ -25,7 +25,7 @@
                     {{currentCity.cityLow}}°
                 </div>
             </div>
-            <div class='hour'>
+            <div class="hour">
                 <div>
                     <i class="fas fa-thermometer-half"></i>
                 </div>
@@ -33,7 +33,7 @@
                     {{currentCity.temp}}°
                 </div>
             </div>
-            <div class='hour'>
+            <div class="hour">
                 <div>
                     <i class="fas fa-temperature-high"></i>
                 </div>
@@ -43,19 +43,19 @@
             </div>
         </div>
     </div>
-    <div class='width-100 text-center flex-container column'>
-        <div class='padding-l5 width-100 city-high-low text-left '>
+    <div class="width-100 text-center flex-container column">
+        <div class="padding-l5 width-100 city-high-low text-left ">
             Pressure For Today: {{currentCity.wind}}
 
         </div>
     </div>
-    <div class='width-100 text-center flex-container column'>
-        <div class='padding-l5 width-100 city-high-low text-left '>
+    <div class="width-100 text-center flex-container column">
+        <div class="padding-l5 width-100 city-high-low text-left ">
             Wind For Today
         </div>
-        <div class='panel width-100 flex-container space-evenly'>
+        <div class="panel width-100 flex-container space-evenly">
 
-            <div class='hour'>
+            <div class="hour">
                 <div>
                     <i class="fas fa-tachometer-alt"></i>
                 </div>
@@ -63,7 +63,7 @@
                     {{currentCity.wind}}
                 </div>
             </div>
-            <div class='hour'>
+            <div class="hour">
                 <div>
                     <i class="fas fa-directions"></i>
                 </div>

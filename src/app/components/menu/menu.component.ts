@@ -1,15 +1,16 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Point } from 'src/app/services/weather.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit, OnChanges {
+export class MenuComponent implements OnInit   {
   @Input() cityNames: any;
   @Input() showModal: boolean = false;
   @Output() showModalChange = new EventEmitter<boolean>();
-  @Output() getSelectedId = new EventEmitter<number>();
+  @Output() getSelectedCoords = new EventEmitter<Point>();
   searchInput = '';
   constructor() { }
   ngOnInit() {
@@ -17,19 +18,14 @@ export class MenuComponent implements OnInit, OnChanges {
       this.closeModel();
     });
   }
-  ngOnChanges(changes: any) {
-    console.log(changes);
-    document.getElementsByClassName('modal-body')[0].scrollTop = 0;
-
-  }
   closeModel() {
     this.showModal = false;
     this.showModalChange.emit(this.showModal);
   }
 
-  returnSelectedCity(id: number) {
-    console.log(id);
-    this.getSelectedId.emit(+id);
+  returnSelectedCity(lat: number, lon: number) {
+    const point: Point = { lat, lon };
+    this.getSelectedCoords.emit(point);
     this.searchInput = '';
   }
 }

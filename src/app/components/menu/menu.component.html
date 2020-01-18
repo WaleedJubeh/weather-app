@@ -12,7 +12,7 @@
                 Cities
             </div>
             <div class='flex-container center-all column'>
-                <div class='city-element' (click)="returnSelectedCity(city.id);closeModel();" *ngFor='let city of cityNames | cityFilter:searchInput'>
+                <div class='city-element' (click)="returnSelectedCity(city.coord.lat,city.coord.lon);closeModel();" *ngFor='let city of cityNames | cityFilter:searchInput'>
                     {{city.name}}
                 </div>
             </div>
